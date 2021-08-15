@@ -1,38 +1,169 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  font-size: 2.5rem;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-top: 30px;
+  padding: 10px;
+  letter-spacing: 2px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+h4 {
+  text-align: center;
+  opacity: 0.4;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  padding: 5px;
+  color: white;
+  width: 500px;
+  height: 60px;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+.inf {
+  padding: 20px;
+  outline: none;
+  width: 300px;
+  border: none;
+  font-size: larger;
+}
+
+.btn {
+  margin: 10px;
+  height: 50px;
+  background-color: #20e3b2 !important;
+  font-size: 1.1rem !important;
+  font-weight: 700 !important;
+}
+
+.complete {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+.todo-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px;
+  color: white;
+  font-size: larger;
+  font-weight: bold;
+  background: linear-gradient(to right, #0cebeb, #20e3b2, #29ffc6);
+  padding: 16px;
+  border-radius: 10px;
+  width: auto;
+  /* max-width: 50%; */
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+.edit,
+.delete {
+  background-color: white;
+  padding: 6px;
+  border-radius: 30px;
+  color: #20e3b2;
+  margin: 0px 5px;
+  cursor: pointer;
+}
+
+.todo-list {
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px 0px;
+  margin-top: 20px;
+  width: 510px;
+  border-radius: 10px;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+@media only screen and (max-width: 768px) {
+  .todo-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 4px auto;
+    margin-top: 20px;
+    font-size: medium;
+    color: white;
+    background: linear-gradient(to right, #0cebeb, #20e3b2, #29ffc6);
+    padding: 10px;
+    border-radius: 10px;
+    width: 75%;
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+      0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+      0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+      0 100px 80px rgba(0, 0, 0, 0.12);
   }
-  to {
-    transform: rotate(360deg);
+
+  .card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding: 5px;
+    color: white;
+    width: 355px;
+    height: 60px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+  }
+
+  .inf {
+    padding: 20px;
+    outline: none;
+    width: 180px;
+    /* border: none; */
+    font-size: medium;
+  }
+
+  .btn {
+    margin: 10px;
+    height: 50px;
+    background-color: #20e3b2 !important;
+    font-size: 0.8rem !important;
+    font-weight: 700 !important;
+  }
+
+  .todo-list {
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 0px;
+    margin-top: 20px;
+    width: 360px;
+    border-radius: 10px;
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+      0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+      0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+      0 100px 80px rgba(0, 0, 0, 0.12);
   }
 }
